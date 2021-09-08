@@ -109,7 +109,7 @@ function fetchData(country) {
   const api_fetch = async (country) => {
     //for the total cases
     await fetch(
-      "http://api.covid19api.com/total/country/" +
+      "https://api.covid19api.com/total/country/" +
       country +
       "/status/confirmed",
       requestOptions
@@ -125,7 +125,7 @@ function fetchData(country) {
       });
     //for the recovered cases
     await fetch(
-      "http://api.covid19api.com/total/country/" +
+      "https://api.covid19api.com/total/country/" +
       country +
       "/status/recovered",
       requestOptions
@@ -140,7 +140,7 @@ function fetchData(country) {
       });
     //for the deaths cases
     await fetch(
-      "http://api.covid19api.com/total/country/" + country + "/status/deaths",
+      "https://api.covid19api.com/total/country/" + country + "/status/deaths",
       requestOptions
     )
       .then((res) => {
@@ -153,7 +153,7 @@ function fetchData(country) {
       });
 
     //for the global stats
-    await fetch("http://api.covid19api.com/summary", requestOptions)
+    await fetch("https://api.covid19api.com/summary", requestOptions)
       .then((res) => {
         return res.json();
       })
@@ -189,7 +189,7 @@ function fetchData(country) {
       if (country === data.name) {
         console.log(data.code);
         fetch(
-          `http://newsapi.org/v2/top-headlines?country=${data.code.toLowerCase()}&category=health&apiKey=996f4ea38980427e806b8f9d3b8e1eca`,
+          `https://newsapi.org/v2/top-headlines?country=${data.code.toLowerCase()}&category=health&apiKey=996f4ea38980427e806b8f9d3b8e1eca`,
           requestOptions
         )
           .then((res) => {
