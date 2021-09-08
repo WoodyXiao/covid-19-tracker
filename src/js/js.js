@@ -109,9 +109,9 @@ function fetchData(country) {
   const api_fetch = async (country) => {
     //for the total cases
     await fetch(
-      "https://api.covid19api.com/total/country/" +
-        country +
-        "/status/confirmed",
+      "http://api.covid19api.com/total/country/" +
+      country +
+      "/status/confirmed",
       requestOptions
     )
       .then((res) => {
@@ -125,9 +125,9 @@ function fetchData(country) {
       });
     //for the recovered cases
     await fetch(
-      "https://api.covid19api.com/total/country/" +
-        country +
-        "/status/recovered",
+      "http://api.covid19api.com/total/country/" +
+      country +
+      "/status/recovered",
       requestOptions
     )
       .then((res) => {
@@ -140,7 +140,7 @@ function fetchData(country) {
       });
     //for the deaths cases
     await fetch(
-      "https://api.covid19api.com/total/country/" + country + "/status/deaths",
+      "http://api.covid19api.com/total/country/" + country + "/status/deaths",
       requestOptions
     )
       .then((res) => {
@@ -153,7 +153,7 @@ function fetchData(country) {
       });
 
     //for the global stats
-    await fetch("https://api.covid19api.com/summary", requestOptions)
+    await fetch("http://api.covid19api.com/summary", requestOptions)
       .then((res) => {
         return res.json();
       })
@@ -189,7 +189,7 @@ function fetchData(country) {
       if (country === data.name) {
         console.log(data.code);
         fetch(
-          `https://newsapi.org/v2/top-headlines?country=${data.code.toLowerCase()}&category=health&apiKey=996f4ea38980427e806b8f9d3b8e1eca`,
+          `http://newsapi.org/v2/top-headlines?country=${data.code.toLowerCase()}&category=health&apiKey=996f4ea38980427e806b8f9d3b8e1eca`,
           requestOptions
         )
           .then((res) => {
@@ -207,8 +207,8 @@ function fetchData(country) {
             }
             showNews();
           }).catch(err => {
-              alert(err);
-              clearNews();
+            alert(err);
+            clearNews();
           });
       }
     });
@@ -359,9 +359,8 @@ function showNews() {
   if (values.length > 1) {
     for (let i = 0; i < 6; i++) {
       country_news_title_element.innerHTML += `<div id='${i}' class="new-box"></div>`;
-      document.getElementById(`${i}`).innerHTML += `<a href="${
-        values[1][i]
-      }"><h4>${i + 1 + ". " + values[0][i]}</h4></a>`;
+      document.getElementById(`${i}`).innerHTML += `<a href="${values[1][i]
+        }"><h4>${i + 1 + ". " + values[0][i]}</h4></a>`;
       document.getElementById(
         `${i}`
       ).innerHTML += `<a href="${values[1][i]}"><img src="${values[2][i]}" class="news-img"/></a>`;
