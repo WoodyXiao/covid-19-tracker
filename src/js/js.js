@@ -64,7 +64,7 @@ let country_news = {
 };
 
 // get users country code
-let country_code = geoplugin_countryCode();
+let country_code = "CA";
 let user_country, user_country_code;
 
 country_list.forEach((country) => {
