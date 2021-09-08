@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linking css file -->
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- linking font awsome css  -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <title>Covid-19 Tracker</title>
+  </head>
+  <body>
+    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <!-- for header part -->
+    <header>
+      <div class="logo">
+        <p>
+          C<span class="icon"><img src="src/img/virus.png" alt="" /></span
+          >VID-19 TRACKER
+        </p>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="">HOME</a>
+            <a href="">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end for header part -->
+
+    <!-- for the main content -->
+    <main>
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="country-name">Loading....</div>
+            <div class="change-country-btn">Change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country...."
+                />
+                <i class="fas fa-times close-btn"></i>
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+          <div class="total-case">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="axes_line_chart"></canvas>
+        </div>
+      </div>
+
+      <!-- for the right main content  -->
+      <div class="global-stats">
+        <h1>Global</h1>
+        <div class="total-confirmed">
+          <div class="title">Total Cases</div>
+          <div class="g-value">0</div>
+          <div class="new-g-value">+0</div>
+        </div>
+
+        <div class="total-recovered">
+          <div class="title">Recovered</div>
+          <div class="g-recovered-value">0</div>
+          <div class="new-g-recovered-value">+0</div>
+        </div>
+
+        <div class="total-deaths">
+          <div class="title">Deaths</div>
+          <div class="g-deaths-value">0</div>
+          <div class="new-g-deaths-value">+0</div>
+        </div>
+      </div>
+      <!-- end for the right main content -->
+    </main>
+    <!-- end for the main content -->
+
+    <!-- for the news part -->
+    <section class="news">
+      <h2 class="news-heading">
+        Top news for <span class="country-new">Country Name</span>
+      </h2>
+      <div class="news-container">
+      </div>
+    </section>
+    <!-- end for the news part -->
+
+    <!-- for the footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="copyright">
+          <p>
+            Designed by
+            <span><a href="https://github.com/WoodyXiao">Manatay XIAO</a></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- end for the footer -->
+
+    <!-- for the js file linking -->
+    <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+      integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="src/js/countries.js"></script>
+    <script src="src/js/js.js"></script>
+  </body>
+</html>

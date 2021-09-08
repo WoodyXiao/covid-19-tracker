@@ -1,0 +1,440 @@
+/* for the general css code */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+html {
+  font-size: 16;
+}
+
+body {
+  background-color: #2b0b07;
+}
+
+.hide {
+  display: none;
+}
+
+.fadeIn {
+  animation: fade 0.5s ease-in-out 0s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* for the heading setting in css part */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 80%;
+  width: 100%;
+
+  margin: 0 auto;
+  margin-top: 15px;
+
+  padding: 20px;
+
+  border-radius: 15px 15px 0 0;
+
+  background-color: #f25f4c;
+}
+
+header .logo {
+  padding-left: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+header .logo p {
+  font-weight: bold;
+  padding-left: 10px;
+  font-size: 35px;
+
+  color: #6e251c;
+  transition: all 0.3s ease 0s;
+}
+
+/* for the logo setting in nav in header */
+header .logo .icon img {
+  height: 30px;
+  width: auto;
+  transition: all 0.3s ease 0s;
+}
+
+/* for the nav item setting css part */
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li {
+  list-style: none;
+  transition: all 0.3s ease 0s;
+}
+header nav ul li:last-child {
+  padding-right: 25px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #6e251c;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+/* for the main content css part */
+main {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #fffffe;
+
+  display: flex;
+}
+main .stats {
+  width: 100%;
+  height: 1000px;
+  background-color: #fffffe;
+}
+
+/* for the covide-19 report */
+main .stats .latest-report {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 80%;
+  /* margin: 0 auto; */
+  margin-left: 50px;
+  padding-top: 50px;
+  font-weight: bolder;
+
+  transition: all 0.3s ease 0s;
+}
+main .stats .latest-report .country,
+main .stats .latest-report .country .total-case,
+main .stats .latest-report .country .recovered,
+main .stats .latest-report .country .deaths {
+  height: 100px;
+
+  transition: all 0.3s ease 0s;
+}
+main .stats .latest-report .country .country-name {
+  font-size: 2.2em;
+  color: #6e251c;
+  font-weight: bolder;
+
+  transition: all 0.3s ease 0s;
+}
+main .stats .latest-report .country .change-country {
+  cursor: pointer;
+}
+.title {
+  font-size: 1.3em;
+
+  transition: all 0.3s ease 0s;
+}
+.total-case .value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f25f4c;
+
+  transition: all 0.3s ease 0s;
+}
+.total-case .new-value {
+  color: #f25f4c;
+  transition: all 0.3s ease 0s;
+}
+.recovered .value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #4be9bc;
+  transition: all 0.3s ease 0s;
+}
+.recovered .new-value {
+  color: #4be9bc;
+  transition: all 0.3s ease 0s;
+}
+.deaths .value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #0f0e17;
+  transition: all 0.3s ease 0s;
+}
+.deaths .new-value {
+  color: #0f0e17;
+  transition: all 0.3s ease 0s;
+}
+.new-value {
+  font-size: 1.3em;
+  transition: all 0.3s ease 0s;
+}
+
+/* for the chart part CSS part */
+main .stats{
+    height: auto;
+}
+main .stats .chart {
+  width: 85%;
+  height: 70vh;
+  min-height: 600px;
+
+  /* margin: 0 auto; */
+  margin-left: 50px;
+  padding: 50px 0;
+  font-weight: bolder;
+
+  transition: all 0.3s ease 0s;
+}
+
+/* for searching country css */
+main .stats .latest-report .country .change-country-btn {
+  text-decoration: underline;
+}
+
+main .stats .latest-report .country .change-country-btn:hover {
+  cursor: pointer;
+}
+main .latest-report .country .search-country {
+  position: relative;
+  top: 10px;
+}
+main .latest-report .country .search-country .search-box {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 400px;
+  height: 30px;
+
+  transition: all 0.5s ease 0s;
+}
+main .latest-report .country .search-country .search-box input {
+  width: 400px;
+  height: 25px;
+  border: none;
+
+  background-color: #6e251c;
+  color: #fffffe;
+  font-weight: bold;
+
+  padding-left: 10px;
+  font-size: 1.1em;
+
+  z-index: 2;
+}
+main .latest-report .country .search-country .search-box input::placeholder {
+  color: #fffffe;
+  font-size: 0.9em;
+}
+
+main .latest-report .country .search-country .search-box input:focus {
+  border: none;
+  outline: none;
+}
+main .latest-report .country .search-country .search-box input:active {
+  border: none;
+  outline: none;
+}
+main .latest-report .country .search-country .search-box i {
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 1.5em;
+  color: #fffffe;
+  top: 2.5px;
+  right: 5px;
+  position: absolute;
+  z-index: 3;
+}
+main .latest-report .country .search-country .country-list {
+  display: flex;
+  position: absolute;
+  top: 28px;
+  width: 400px;
+  height: 300px;
+  background-color: #f25f4c;
+  overflow: scroll;
+  border-radius: 0 0 10px 10px;
+
+  transition: all 0.3s ease 0s;
+}
+main .latest-report .country .search-country .country-list ul li {
+  list-style: none;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #3b100a;
+}
+main .latest-report .country .search-country .country-list ul li:hover {
+  cursor: pointer;
+}
+
+/* for the second paart of the main content in css part */
+main .global-stats {
+  padding-top: 55px;
+  margin-right: 50px;
+
+  display: block;
+  width: 150px;
+}
+main .global-stats h1 {
+  color: #6e251c;
+  font-size: 2.2em;
+
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-confirmed,
+main .global-stats .total-recovered,
+main .global-stats .total-deaths {
+  margin-top: 20px;
+
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-confirmed .title,
+main .global-stats .total-recovered .title,
+main .global-stats .total-deaths .title {
+  font-size: 1.3em;
+  font-weight: bolder;
+
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-confirmed .g-value {
+  font-size: 1.3em;
+  color: #f25f4c;
+  font-weight: bolder;
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-confirmed .new-g-value {
+  font-size: 1em;
+  color: #f25f4c;
+  font-weight: bolder;
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-recovered .g-recovered-value {
+  font-size: 1.3em;
+  color: #4be9bc;
+  font-weight: bolder;
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-recovered .new-g-recovered-value {
+  font-size: 1em;
+  color: #4be9bc;
+  font-weight: bolder;
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-deaths .g-deaths-value {
+  font-size: 1.3em;
+  color: #2b0b07;
+  font-weight: bolder;
+  transition: all 0.3s ease 0s;
+}
+main .global-stats .total-deaths .new-g-deaths-value {
+  font-size: 1em;
+  color: #2b0b07;
+  font-weight: bolder;
+  transition: all 0.3s ease 0s;
+}
+
+/* for the news part */
+section {
+  max-width: 80%;
+  
+  background-color: #fffffe;
+
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+section .news-heading {
+  margin-left: 50px;
+  padding-bottom:20px;
+  color:#3b100a;
+}
+section .news-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    max-width:80%;
+    width: 100%;
+    height:auto;
+    /* background-color:rgb(165, 165, 165); */
+
+    margin-left: 50px;
+}
+section .news-container .new-box{
+    display: block;
+    width: 250px;
+    height:300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20);
+    margin-top: 20px;
+    margin-bottom:20px;
+    border-radius: 10px;
+
+    overflow: hidden;
+    transition:all 0.5s ease 0s;
+}
+section .news-container .new-box:hover{
+    transform:scale(1.08);
+}
+section .news-container .new-box h4{
+    display: block;
+    height:100px;
+    color:#6e251c;
+    margin-top: 10px;
+    
+    font-size: 0.8em;
+    padding:10px;
+}
+section .news-container .new-box h4:hover{
+    text-decoration: underline;
+    transition:all 0.4s ease 0s;
+}
+section .news-container .new-box a{
+    display: block;
+    font-size: 1.1em;
+    text-decoration: none;
+    color:#2b0b07;
+    padding-bottom:10px;
+}
+section .news-container .new-box .news-img{
+    width: auto;
+    height:200px;
+}
+
+/* for the footer part */
+footer {
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 80%;
+  width: 100%;
+
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 30px;
+
+  border-radius: 0 0 15px 15px;
+
+  background-color: #f25f4c;
+}
+footer .footer-container .copyright {
+  margin: 0 auto;
+  padding-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+footer .footer-container .copyright p a {
+  text-decoration: none;
+  color: #0f0e17;
+}
+footer .footer-container .copyright p a:hover{
+    text-decoration: underline;
+}
